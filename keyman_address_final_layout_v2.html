@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Keyman Address – Your address for life’s meaningful moments</title>
+<meta content="Keyman Address in Nyeri is a serene Airbnb retreat with a lush garden, main suite, and garden studios. Perfect for couples, families, small groups, and meaningful gatherings." name="description"/>
+<meta content="Nyeri Airbnb, couples retreat Kenya, family Airbnb Nyeri, garden suites Nyeri, Keyman Address" name="keywords"/>
+<meta content="Keyman Address – Your address for life’s meaningful moments" property="og:title"/>
+<meta content="Rediscover, reconnect, and revitalise at Keyman Address in Nyeri – a serene garden retreat for couples, families, and small groups." property="og:description"/>
+<meta content="IMG_8622.jpg" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Keyman Address – Your address for life’s meaningful moments" name="twitter:title"/>
+<meta content="Rediscover, reconnect, and revitalise at Keyman Address in Nyeri – a serene garden retreat." name="twitter:description"/>
+<meta content="IMG_8622.jpg" name="twitter:image"/>
+<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --brand:#1E3D2F; --accent:#E66A1D; --charcoal:#333333; --cream:#F9F5F0; --card:#ffffff;
+}
+* { box-sizing:border-box; }
+body { margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--charcoal); background:url('GP010183.JPG') center/cover fixed no-repeat; }
+body::after { content:""; position:fixed; inset:0; background:rgba(255,255,255,0.9); z-index:-1; }
+h1,h2,.script { font-family:'Lavishly Yours',cursive; }
+h2 { color:var(--brand); font-size:clamp(28px,5vw,44px); margin:0 0 12px; }
+a { color:var(--accent); text-decoration:none; } a:hover { color:var(--brand); }
+
+/* NAV over hero */
+.nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:10px 18px; background:rgba(0,0,0,0.35); backdrop-filter:saturate(1.1) blur(6px); }
+.nav .left { display:flex; align-items:center; gap:14px; }
+.nav img.logo { height:46px; }
+.nav .links > a, .nav .links > .dropdown { color:#fff; margin:0 6px; font-weight:600; padding:6px 8px; }
+.nav .links a.btn { background:var(--accent); border-radius:999px; }
+.nav .dropdown { position:relative; display:inline-block; }
+.nav .dropdown:hover .menu { display:block; }
+.nav .menu { display:none; position:absolute; top:110%; left:0; min-width:200px; background:#ffffff; color:var(--charcoal); border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); overflow:hidden; }
+.nav .menu a { display:block; padding:10px 12px; color:var(--charcoal); } .nav .menu a:hover { background:#f6f6f6; }
+
+/* HERO split layout */
+.hero { position:relative; min-height:100vh; padding-top:72px; display:grid; grid-template-columns:1.2fr .9fr; gap:20px; align-items:center; background:url('IMG_8622.jpg') center/cover no-repeat; color:#fff; }
+.hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.hero > * { position:relative; z-index:1; }
+.hero-left { padding:20px; }
+.hero h1 { font-size:clamp(34px,6vw,68px); margin:0 0 10px; text-shadow:0 2px 6px rgba(0,0,0,.6); }
+.hero p { color:#eee; margin:0 0 14px; font-size:1.1rem; }
+.cta { display:inline-block; background:var(--accent); color:#fff; padding:12px 18px; border-radius:999px; font-weight:700; }
+
+/* Calendar card */
+.calendar-box { justify-self:end; margin:20px; width:380px; max-width:92vw; background:rgba(255,255,255,0.88); border:1px solid rgba(0,0,0,.05); border-radius:16px; padding:16px; box-shadow:0 10px 30px rgba(0,0,0,0.25); color:var(--charcoal); }
+.calendar-box h3 { color:var(--brand); text-align:center; margin:6px 0 12px; }
+.cal { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; }
+.cal div { background:var(--card); padding:10px; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+.day-muted { opacity:.5; } .offseason { background:#e9f9ec; } .peak { background:#fff3cf; } .unavail { background:#ffe6e6; text-decoration:line-through; }
+.legend { margin-top:8px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center; font-size:.9rem; }
+.legend .dot { width:12px; height:12px; border-radius:50%; display:inline-block; margin-right:6px; vertical-align:middle; }
+.check-buttons { display:flex; gap:10px; justify-content:center; margin-top:12px; }
+.check-buttons a { background:var(--accent); color:#fff; padding:10px 14px; border-radius:999px; font-weight:700; }
+
+/* Sections */
+.block { padding:64px 20px; max-width:1100px; margin:0 auto; }
+.section-card { background:#fff; border:1px solid rgba(0,0,0,.05); border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.06); }
+
+/* About Food 2-col */
+.food-flex { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+.food-flex img { width:100%; border-radius:12px; box-shadow:0 8px 22px rgba(0,0,0,.12); }
+
+/* Galleries */
+.grid-gallery { display:grid; gap:10px; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
+.grid-gallery img { width:100%; height:220px; object-fit:cover; border-radius:10px; display:block; }
+
+/* Things To Do cards */
+.grid-cards { display:grid; gap:20px; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }
+.card { background:#fff; border-radius:12px; padding:20px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+.card h3 { color:var(--accent); margin:10px 0; }
+
+/* Tables */
+.table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; }
+.table th,.table td { padding:12px 14px; border-bottom:1px solid rgba(0,0,0,.06); text-align:left; }
+.table th { background:#f4faf6; color:var(--brand); }
+
+/* Lightbox with prev/next/close */
+.lightbox { position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.92); z-index:2000; }
+.lightbox.active { display:flex; }
+.lightbox img { max-width:92vw; max-height:85vh; border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,.4); }
+.lb-close { position:absolute; top:18px; right:22px; color:#fff; font-size:28px; cursor:pointer; background:rgba(255,255,255,.15); padding:6px 10px; border-radius:8px; }
+.lb-arrow { position:absolute; top:50%; transform:translateY(-50%); font-size:42px; color:#fff; cursor:pointer; background:rgba(255,255,255,.15); width:48px; height:56px; display:grid; place-items:center; border-radius:10px; }
+.lb-prev { left:20px; } .lb-next { right:20px; }
+
+/* Footer */
+footer { text-align:center; padding:24px; background:var(--brand); color:#fff; }
+
+/* Responsive */
+@media (max-width: 950px) { .hero { grid-template-columns:1fr; } .calendar-box { justify-self:center; } }
+
+/* --- Keyman Address updates (spacing + activity cards) --- */
+#spaces { padding-top: 36px; }
+#spaces > h2 { margin-bottom: 8px !important; }
+#spaces .grid-gallery { margin-top: 10px !important; }
+
+/* Things To Do redesigned cards */
+.grid-cards { display:grid; gap:20px; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }
+.card-activity { position:relative; border-radius:12px; overflow:hidden; min-height:240px; background-size:cover; background-position:center; }
+.card-activity .overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.05) 20%, rgba(0,0,0,0.55) 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:16px; color:#fff; }
+.card-activity h3 { color:#E66A1D; margin:0 0 6px; font-family:'Lavishly Yours',cursive; font-size:1.6rem; }
+.card-activity p { margin:0; font-size:0.95rem; }
+.card-activity:hover { transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,0.15); transition:all .35s ease; }
+
+.nav img.logo { height:70px !important; }
+@media(max-width:768px){ .nav img.logo { height:50px !important; } }
+
+.hero { position:relative; min-height:100vh; background:url('IMG_8622.jpg') center/cover no-repeat; display:grid; grid-template-columns:1fr 1fr; align-items:center; padding-top:70px; color:#fff; }
+.hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.hero>* { position:relative; z-index:1; padding:20px; }
+.cta { background:var(--accent); color:#fff; padding:12px 20px; border-radius:999px; text-decoration:none; margin:5px; display:inline-block; }
+.calendar-box { background:rgba(255,255,255,0.92); padding:12px; border-radius:14px; margin-top:10px; overflow:hidden; max-height:0; transition:max-height .5s ease, opacity .5s ease; opacity:0; width:100%; }
+.calendar-box.active { max-height:600px; opacity:1; }
+.note { font-size:0.85rem; color:#ddd; margin-top:6px; display:none; opacity:0; transition:opacity .35s ease; }
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="nav">
+<div class="left"><img alt="Keyman Address Logo" class="logo" src="Address_Logo_Transparent.png"/></div>
+<div class="links">
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<div class="dropdown">
+<a href="#spaces">Our Spaces ▾</a>
+<div class="menu">
+<a href="#garden">Garden</a>
+<a href="#main-suite">Main Suite</a>
+<a href="#garden-suites">Garden Suites</a>
+</div>
+</div>
+<a href="#food">About Food</a>
+<a href="#things">Things To Do</a>
+<div class="dropdown">
+<a href="#more">More ▾</a>
+<div class="menu">
+<a href="#pricing">Pricing</a>
+<a href="#rules">Rules</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+<a class="btn" href="#booking">Book Now</a>
+</div>
+</nav>
+<!-- HERO -->
+<header class="hero" id="home">
+<div class="hero-left">
+<h1>Your address for life’s meaningful moments</h1>
+<p>Rediscover, reconnect, and revitalise in the heart of Nyeri.</p>
+</div>
+<div class="hero-right" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+<a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe9E_YwT3-sdAqurQuXCW3YG6bT7_juG4g62e-PwfxdB_2U7A/viewform?usp=header" id="bookBtn" style="margin-bottom:12px;" target="_blank">Book Your Stay</a>
+<p class="note" id="bookNote">
+        The booking form has opened in a new tab. If it didn’t, please check your browser settings and 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9E_YwT3-sdAqurQuXCW3YG6bT7_juG4g62e-PwfxdB_2U7A/viewform?usp=header" style="color:#fff; text-decoration:underline;" target="_blank">click here directly</a>.
+      </p>
+<a class="cta" href="#" id="toggleCalendar" style="margin-bottom:12px;">Check Availability</a>
+<div class="check-buttons" style="margin:10px 0; text-align:center;">
+<a class="cta" href="#" id="checkInBtn">Check In</a>
+<a class="cta" href="#" id="checkOutBtn">Check Out</a>
+</div>
+
+<div class="calendar-box" id="calendarBox">
+<h3>Availability Calendar</h3>
+<iframe frameborder="0" scrolling="no" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=UTC&amp;showPrint=0&amp;title=Keyman%20Address%20Booking%20Calendar&amp;src=a2V5bWFuYWRkcmVzc0BnbWFpbC5jb20&amp;src=ZW4ua2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23f4511e&amp;color=%230b8043" style="border:solid 1px #777; border-radius:12px; width:100%; height:400px;"></iframe>
+
+</div>
+</div>
+</header><section class="block" id="spaces">
+<h2>Our Spaces</h2>
+</section><section class="block" id="garden">
+<h2>Garden Gallery</h2>
+<div class="grid-gallery"><a class="thumb" data-index="0" data-section="garden" href="GP010177.JPG"><img alt="Garden Gallery image 1" loading="lazy" src="GP010177.JPG"/></a><a class="thumb" data-index="1" data-section="garden" href="GP010179.JPG"><img alt="Garden Gallery image 2" loading="lazy" src="GP010179.JPG"/></a><a class="thumb" data-index="2" data-section="garden" href="GP010127.JPG"><img alt="Garden Gallery image 3" loading="lazy" src="GP010127.JPG"/></a><a class="thumb" data-index="3" data-section="garden" href="GP010174.JPG"><img alt="Garden Gallery image 4" loading="lazy" src="GP010174.JPG"/></a><a class="thumb" data-index="4" data-section="garden" href="GP010181.JPG"><img alt="Garden Gallery image 5" loading="lazy" src="GP010181.JPG"/></a><a class="thumb" data-index="5" data-section="garden" href="GP010171.JPG"><img alt="Garden Gallery image 6" loading="lazy" src="GP010171.JPG"/></a><a class="thumb" data-index="6" data-section="garden" href="GP010124.JPG"><img alt="Garden Gallery image 7" loading="lazy" src="GP010124.JPG"/></a><a class="thumb" data-index="7" data-section="garden" href="IMG_8623.jpg"><img alt="Garden Gallery image 8" loading="lazy" src="IMG_8623.jpg"/></a><a class="thumb" data-index="8" data-section="garden" href="IMG_8481.jpg"><img alt="Garden Gallery image 9" loading="lazy" src="IMG_8481.jpg"/></a><a class="thumb" data-index="9" data-section="garden" href="IMG_8630.jpg"><img alt="Garden Gallery image 10" loading="lazy" src="IMG_8630.jpg"/></a></div>
+</section><section class="block" id="garden-suites">
+<h2>Garden Suites Gallery</h2>
+<div class="grid-gallery"><a class="thumb" data-index="0" data-section="garden-suites" href="IMG_8336.jpg"><img alt="Garden Suites Gallery image 1" loading="lazy" src="IMG_8336.jpg"/></a><a class="thumb" data-index="1" data-section="garden-suites" href="IMG_8339.jpg"><img alt="Garden Suites Gallery image 2" loading="lazy" src="IMG_8339.jpg"/></a><a class="thumb" data-index="2" data-section="garden-suites" href="IMG_8375.jpg"><img alt="Garden Suites Gallery image 3" loading="lazy" src="IMG_8375.jpg"/></a><a class="thumb" data-index="3" data-section="garden-suites" href="IMG_8511.jpg"><img alt="Garden Suites Gallery image 4" loading="lazy" src="IMG_8511.jpg"/></a><a class="thumb" data-index="4" data-section="garden-suites" href="IMG_8512.jpg"><img alt="Garden Suites Gallery image 5" loading="lazy" src="IMG_8512.jpg"/></a><a class="thumb" data-index="5" data-section="garden-suites" href="IMG_8539.jpg"><img alt="Garden Suites Gallery image 6" loading="lazy" src="IMG_8539.jpg"/></a><a class="thumb" data-index="6" data-section="garden-suites" href="IMG_8524.jpg"><img alt="Garden Suites Gallery image 7" loading="lazy" src="IMG_8524.jpg"/></a><a class="thumb" data-index="7" data-section="garden-suites" href="IMG_8444.jpg"><img alt="Garden Suites Gallery image 8" loading="lazy" src="IMG_8444.jpg"/></a><a class="thumb" data-index="8" data-section="garden-suites" href="IMG_8458.jpg"><img alt="Garden Suites Gallery image 9" loading="lazy" src="IMG_8458.jpg"/></a><a class="thumb" data-index="9" data-section="garden-suites" href="IMG_8515.jpg"><img alt="Garden Suites Gallery image 10" loading="lazy" src="IMG_8515.jpg"/></a></div>
+</section><section class="block" id="main-suite">
+<h2>Main Suite Gallery</h2>
+<div class="grid-gallery"><a class="thumb" data-index="0" data-section="main-suite" href="IMG_3942.jpg"><img alt="Main Suite Gallery image 1" loading="lazy" src="IMG_3942.jpg"/></a><a class="thumb" data-index="1" data-section="main-suite" href="IMG_3946.jpg"><img alt="Main Suite Gallery image 2" loading="lazy" src="IMG_3946.jpg"/></a><a class="thumb" data-index="2" data-section="main-suite" href="IMG_3963.jpg"><img alt="Main Suite Gallery image 3" loading="lazy" src="IMG_3963.jpg"/></a><a class="thumb" data-index="3" data-section="main-suite" href="IMG_3969.jpg"><img alt="Main Suite Gallery image 4" loading="lazy" src="IMG_3969.jpg"/></a><a class="thumb" data-index="4" data-section="main-suite" href="IMG_3971.jpg"><img alt="Main Suite Gallery image 5" loading="lazy" src="IMG_3971.jpg"/></a><a class="thumb" data-index="5" data-section="main-suite" href="IMG_8719.jpg"><img alt="Main Suite Gallery image 6" loading="lazy" src="IMG_8719.jpg"/></a><a class="thumb" data-index="6" data-section="main-suite" href="IMG_8684.jpg"><img alt="Main Suite Gallery image 7" loading="lazy" src="IMG_8684.jpg"/></a><a class="thumb" data-index="7" data-section="main-suite" href="IMG_4062.jpg"><img alt="Main Suite Gallery image 8" loading="lazy" src="IMG_4062.jpg"/></a><a class="thumb" data-index="8" data-section="main-suite" href="IMG_8698.jpg"><img alt="Main Suite Gallery image 9" loading="lazy" src="IMG_8698.jpg"/></a><a class="thumb" data-index="9" data-section="main-suite" href="IMG_4112.jpg"><img alt="Main Suite Gallery image 10" loading="lazy" src="IMG_4112.jpg"/></a></div>
+</section>
+<!-- ABOUT US -->
+<section class="block" id="about">
+<h2>About Us</h2>
+<div class="section-card">
+<p>This home was built by my parents who believed deeply in <b>progress and unity</b>. My father was a deep thinker and teacher who guided people with wisdom and brought communities together. My mother was an unstoppable businesswoman, resilient and resourceful, who ensured growth and progress in everything she touched.</p>
+<p>Today, Keyman Address carries forward their spirit. It is a place where couples rediscover love, families reconnect, small groups meet with purpose, and every guest leaves with both memories and the warmth of true hospitality.</p>
+</div>
+</section>
+<!-- ABOUT FOOD -->
+<section class="block" id="food">
+<h2>About Food</h2>
+<div class="section-card food-flex">
+<div style="flex:1; min-width:280px;">
+<p><b>At Keyman Address, food is part of the experience.</b></p>
+<ul>
+<li><b>Cook for Yourself</b> — Guests are welcome to use our indoor kitchen and open‑air garden kitchen.</li>
+<li><b>Chef on Request</b> — We can arrange for a private chef if you’d prefer meals prepared for you.</li>
+<li><b>Order In</b> — We can help you order from nearby Nyeri favorites: <b>Tumu’s</b> (steamed chicken), <b>To Go Is To See</b> (chicken with potatoes &amp; bananas), <b>Mombasa Ndogo – Giakanja</b> (nyama choma), and <b>Nyokabi’s</b> (nyama choma).</li>
+<li><b>Kitchen Garden</b> — Guests can freely pick fresh vegetables and herbs straight from our garden during their stay.</li>
+</ul>
+</div>
+<div style="flex:1; min-width:280px;">
+<img alt="Nyama Choma in Nyeri" src="food.webp"/>
+<p style="font-size:.9rem; color:#666; margin-top:6px; text-align:center;">Nyeri’s famous nyama choma — one of the many local delights we can organize for you.</p>
+</div>
+</div>
+</section>
+<!-- SPACES (GALLERIES) -->
+<!-- THINGS TO DO -->
+<section class="block" id="things">
+<h2>Things To Do</h2>
+<div class="grid-cards grid-cards">
+<div class="card-activity" style="background-image:url('GP010177.JPG');">
+<div class="overlay">
+<h3>Bonfire Nights</h3>
+<p>Gather around the fire under Nyeri’s stars.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('GP010179.JPG');">
+<div class="overlay">
+<h3>Yoga &amp; Meditation</h3>
+<p>Start calm in the garden.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('GP010127.JPG');">
+<div class="overlay">
+<h3>Sip &amp; Draw</h3>
+<p>Create and connect with friends.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('GP010174.JPG');">
+<div class="overlay">
+<h3>Book Club Evenings</h3>
+<p>Share stories in an intimate setting.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('GP010181.JPG');">
+<div class="overlay">
+<h3>Podcast Recording</h3>
+<p>Record in unique indoor/outdoor spaces.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('GP010171.JPG');">
+<div class="overlay">
+<h3>Kitchen Garden Harvest</h3>
+<p>Pick fresh vegetables during your stay.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('GP010124.JPG');">
+<div class="overlay">
+<h3>Board Games</h3>
+<p>Relax with classic games for all ages.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('IMG_8623.jpg');">
+<div class="overlay">
+<h3>Dad’s Library</h3>
+<p>Books available on request.</p>
+</div>
+</div>
+<div class="card-activity" style="background-image:url('IMG_8481.jpg');">
+<div class="overlay">
+<h3>Garden Games</h3>
+<p>Light outdoor games to reconnect.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PRICING -->
+<section class="block" id="pricing">
+<h2>Pricing &amp; Booking</h2>
+<div class="section-card">
+<table class="table">
+<tr><th>Accommodation</th><th>Off-season</th><th>Peak season</th></tr>
+<tr><td>Entire Home</td><td>KES 12,000 / night</td><td>KES 15,000 / night</td></tr>
+<tr><td>Main Suite (Private)</td><td>KES 4,000 / night</td><td>KES 5,000 / night</td></tr>
+<tr><td>Garden Studio (Each)</td><td>KES 3,000 / night</td><td>KES 4,000 / night</td></tr>
+</table>
+<p><b>Peak Season Dates:</b> Dec 15 – Jan 5 • Easter (dates vary) • Jul – Aug • Oct 1 – 20 • All Kenyan public holidays &amp; long weekends.</p>
+<table class="table" style="margin-top:12px;">
+<tr><th>Day-Use &amp; Events</th><th>Rate</th></tr>
+<tr><td>Garden &amp; Common Areas (4 hrs)</td><td>KES 3,500</td></tr>
+<tr><td>Full-Day Retreat (8 hrs, all spaces)</td><td>KES 6,000</td></tr>
+<tr><td>Private Bedroom Lounge add-on</td><td>+ KES 1,500 / room</td></tr>
+<tr><td>Photoshoot / Podcast / Small Event (≤10 pax)</td><td>Half-day KES 3,500 • Full-day KES 5,500</td></tr>
+<tr><td>Sip &amp; Draw / Book Club</td><td>KES 800 per person • OR KES 5,000 group</td></tr>
+</table>
+<p><b>Special Bookings:</b> Small events are limited to 10 people. For 10+ guests, contact <b>keymanaddress@gmail.com</b> or call <b>Evelyn 0729 917 462</b> for approval (KES 2,000 security fee may apply).</p>
+</div>
+</section>
+<!-- RULES -->
+<section class="block" id="rules">
+<h2>House Rules</h2>
+<div class="section-card">
+<ol>
+<li><b>Maximum Capacity:</b> Events or gatherings are limited to <b>10 people</b>. For more than 10 guests, prior approval is required via <b>keymanaddress@gmail.com</b> or <b>Evelyn: 0729 917 462</b>.</li>
+<li><b>Guest Responsibility:</b> The booking guest is fully responsible for the behavior, safety, and actions of their guests. Any damages, breakages, or losses will be charged to the booking guest.</li>
+<li><b>Security Fee:</b> For gatherings above 10 people (with approval), a <b>KES 2,000</b> fee will be charged to cover security chaperone and gate services.</li>
+<li><b>Conduct:</b> <b>Drugs and loud, wild parties are not allowed</b> on the premises.</li>
+<li><b>Quiet Hours:</b> Please observe quiet time from <b>10:00 PM – 7:00 AM</b>.</li>
+<li><b>Check‑In &amp; Check‑Out:</b> Check‑in from <b>2:00 PM</b>, Check‑out by <b>11:00 AM</b>. Late check‑out must be communicated in good time and confirmed by management. During check‑in, guests <b>MUST</b> fill in their details via the <b>Check‑In</b> button on this site, and also <b>Check Out</b> when leaving.</li>
+<li><b>CCTV:</b> For your safety, CCTV cameras operate <b>outdoors only</b>. No cameras inside the house.</li>
+<li><b>Respect for Property:</b> Treat the home, garden, and facilities with care so we keep the space serene and welcoming for everyone.</li>
+</ol>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="block" id="contact">
+<h2>Contact</h2>
+<div class="section-card">
+<p>Email: <a href="mailto:keymanaddress@gmail.com">keymanaddress@gmail.com</a></p>
+<p>Phone: <a href="tel:+254729917462">0729 917 462</a> (Evelyn)</p>
+<p>We’ll add social links here.</p>
+</div>
+</section>
+<footer>© 2025 Keyman Address • Nyeri, Kenya</footer>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+<div class="lb-arrow lb-prev" id="lbPrev">‹</div>
+<img alt="preview" id="lbImg"/>
+<div class="lb-arrow lb-next" id="lbNext">›</div>
+<span class="lb-close" id="lbClose">✕</span>
+</div>
+<script>
+// ----- Calendar (demo; will sync later) -----
+const cal = document.getElementById('cal');
+const daysInMonth = 30;
+const startOffset = 1;
+const peak = [10,11,12,13,14,15,16,20];
+const unavailable = [5,18,25];
+['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(n=>{
+  const h=document.createElement('div'); h.textContent=n; h.className='day-muted'; cal.appendChild(h);
+});
+for(let i=0;i<startOffset;i++){ const d=document.createElement('div'); d.className='day-muted'; cal.appendChild(d);}
+for(let day=1; day<=daysInMonth; day++){ 
+  const tile=document.createElement('div'); tile.textContent=day;
+  tile.className = unavailable.includes(day) ? 'unavail' : (peak.includes(day) ? 'peak' : 'offseason');
+  cal.appendChild(tile);
+}
+document.getElementById('checkinLink').href = '#';
+document.getElementById('checkoutLink').href = '#';
+
+// ----- Lightbox with prev/next/close -----
+const galleries = {
+  'garden': ['GP010177.JPG', 'GP010179.JPG', 'GP010127.JPG', 'GP010174.JPG', 'GP010181.JPG', 'GP010171.JPG', 'GP010124.JPG', 'IMG_8623.jpg', 'IMG_8481.jpg', 'IMG_8630.jpg'],
+  'main-suite': ['IMG_3942.jpg', 'IMG_3946.jpg', 'IMG_3963.jpg', 'IMG_3969.jpg', 'IMG_3971.jpg', 'IMG_8719.jpg', 'IMG_8684.jpg', 'IMG_4062.jpg', 'IMG_8698.jpg', 'IMG_4112.jpg'],
+  'garden-suites': ['IMG_8336.jpg', 'IMG_8339.jpg', 'IMG_8375.jpg', 'IMG_8511.jpg', 'IMG_8512.jpg', 'IMG_8539.jpg', 'IMG_8524.jpg', 'IMG_8444.jpg', 'IMG_8458.jpg', 'IMG_8515.jpg']
+};
+let currentSection = null;
+let currentIndex = 0;
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbPrev = document.getElementById('lbPrev');
+const lbNext = document.getElementById('lbNext');
+const lbClose = document.getElementById('lbClose');
+
+function openLightbox(section, index) {
+  currentSection = section;
+  currentIndex = index;
+  lbImg.src = galleries[section][index];
+  lb.classList.add('active');
+}
+function closeLightbox() { lb.classList.remove('active'); }
+function prevImg() {
+  if (!currentSection) return;
+  currentIndex = (currentIndex - 1 + galleries[currentSection].length) % galleries[currentSection].length;
+  lbImg.src = galleries[currentSection][currentIndex];
+}
+function nextImg() {
+  if (!currentSection) return;
+  currentIndex = (currentIndex + 1) % galleries[currentSection].length;
+  lbImg.src = galleries[currentSection][currentIndex];
+}
+
+document.querySelectorAll('.thumb').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    openLightbox(a.getAttribute('data-section'), parseInt(a.getAttribute('data-index')));
+  });
+});
+lbPrev.addEventListener('click', prevImg);
+lbNext.addEventListener('click', nextImg);
+lbClose.addEventListener('click', closeLightbox);
+lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+document.addEventListener('keydown', (e)=>{
+  if (!lb.classList.contains('active')) return;
+  if (e.key === 'ArrowLeft') prevImg();
+  if (e.key === 'ArrowRight') nextImg();
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+<script>
+// Book button note reveal
+document.getElementById('bookBtn')?.addEventListener('click', function(){
+  const note = document.getElementById('bookNote');
+  if (note) {
+    note.style.display = 'block';
+    requestAnimationFrame(()=> note.style.opacity = '1');
+  }
+});
+
+// Toggle calendar
+document.getElementById('toggleCalendar')?.addEventListener('click', function(e){
+  e.preventDefault();
+  const cal = document.getElementById('calendarBox');
+  cal.classList.toggle('active');
+});
+</script>
+</body>
+</html>
